@@ -1,6 +1,6 @@
 import SmoothScrolling from "./Animation/SmoothScroolling";
 import "./globals.css";
-import "lenis/dist/lenis.css"; // Importe o CSS do Lenis
+import "lenis/dist/lenis.css";
 
 export default function RootLayout({
   children,

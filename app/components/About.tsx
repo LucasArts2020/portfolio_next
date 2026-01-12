@@ -1,9 +1,7 @@
 "use client";
 
-import { Meteors } from "@/components/ui/shadcn-io/meteors";
 import { motion } from "framer-motion";
 
-// Animações
 const container = {
   hidden: { opacity: 0 },
   visible: {
@@ -20,7 +18,6 @@ const item = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
-// Dados da Experiência (Preencha com seus dados reais)
 const experienceData = [
   {
     role: "Full Stack Developer",
@@ -49,7 +46,6 @@ export default function About() {
           viewport={{ once: true, amount: 0.2 }}
           className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start"
         >
-          {/* LADO ESQUERDO: Texto e Bio */}
           <div className="space-y-8">
             <motion.div variants={item}>
               <h1 className="text-4xl md:text-5xl font-semibold leading-tight bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent">
@@ -95,7 +91,6 @@ export default function About() {
             </motion.div>
           </div>
 
-          {/* LADO DIREITO: Cards de Experiência */}
           <div className="flex flex-col gap-4">
             {experienceData.map((exp, index) => (
               <motion.div
@@ -104,7 +99,6 @@ export default function About() {
                 className="group relative flex items-center justify-between p-5 rounded-3xl border border-white/10 bg-zinc-900/50 hover:bg-zinc-800/80 transition-all duration-300"
               >
                 <div className="flex items-center gap-4">
-                  {/* Icon Placeholder */}
                   <div
                     className={`h-12 w-12 rounded-2xl ${exp.color} flex items-center justify-center text-white font-bold text-lg shadow-lg`}
                   >

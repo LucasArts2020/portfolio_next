@@ -71,7 +71,6 @@ const ProjectCarousel = () => {
         </motion.div>
       </div>
 
-      {/* Carousel Container */}
       <div
         ref={carouselRef}
         className="flex gap-6 overflow-x-auto scrollbar-hide px-4 md:px-8 pb-8 snap-x snap-mandatory"
@@ -90,11 +89,9 @@ const ProjectCarousel = () => {
             className="flex-shrink-0 w-[300px] md:w-[400px] snap-center"
           >
             <div className="group relative rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500">
-              {/* Project Card */}
               <div
                 className={`${project.bgColor} p-8 h-[500px] flex items-center justify-center relative`}
               >
-                {/* Mockup Image */}
                 <div className="relative w-full h-full">
                   <Image
                     src={project.image}
@@ -104,7 +101,6 @@ const ProjectCarousel = () => {
                   />
                 </div>
 
-                {/* Hover Overlay */}
                 <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-white p-6">
                   <span className="text-sm uppercase tracking-wider text-cyan-400 mb-2">
                     {project.category}
@@ -122,7 +118,6 @@ const ProjectCarousel = () => {
         ))}
       </div>
 
-      {/* Scroll Indicator (opcional) */}
       <div className="flex justify-center gap-2 mt-8">
         {projects.map((_, index) => (
           <div

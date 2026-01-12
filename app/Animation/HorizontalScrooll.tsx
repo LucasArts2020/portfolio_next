@@ -13,9 +13,7 @@ export default function HorizontalScrooll() {
   return (
     <section ref={targetRef} className="relative h-[300vh]">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden bg-black">
-        <motion.div style={{ x }} className="flex gap-8 px-8">
-          {/* seus mockups aqui */}
-        </motion.div>
+        <motion.div style={{ x }} className="flex gap-8 px-8"></motion.div>
       </div>
     </section>
   );

@@ -9,10 +9,16 @@ export default function Home() {
   return (
     <main>
       <Header />
-      <Hero />
+      <section id="home" className="scroll-mt-32">
+        <Hero />
+      </section>
       <Carousel />
-      <About />
-      <Projetos />
+      <section id="about" className="scroll-mt-32">
+        <About />
+      </section>
+      <section id="portfolio" className="scroll-mt-32">
+        <Projetos />
+      </section>
     </main>
   );
 }

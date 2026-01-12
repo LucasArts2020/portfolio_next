@@ -13,7 +13,7 @@ export default function SmoothScrolling({
       options={{
         lerp: 0.1,
         duration: 1.5,
-        syncTouch: false, // Desabilitado em mobile para melhor performance
+        syncTouch: false,
         smoothWheel: true,
         wheelMultiplier: 1,
         touchMultiplier: 2,

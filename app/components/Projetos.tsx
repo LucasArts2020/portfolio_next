@@ -5,18 +5,25 @@ import Image from "next/image";
 
 const portfolioItems = [
   {
-    title: " LaraStore: Um E-commerce com Laravel",
+    title: "LaraStore: A Laravel E-commerce",
     description:
-      "Um projeto de e-commerce (loja virtual) completo, construído do zero com Laravel 12, Blade e Tailwind CSS. Este projeto foi desenvolvido como parte de um estudo prático focado em dominar os fundamentos e o ecossistema moderno do Laravel.",
-
+      "A complete e-commerce project built from scratch with Laravel 12, Blade, and Tailwind CSS. Developed as a practical study focused on mastering the fundamentals and the modern Laravel ecosystem.",
     image: "/projectphp.png",
     tags: ["PHP", "Laravel"],
   },
   {
-    title: "Projeto 2",
-    description: "Descrição do projeto",
+    title: "Music Connect",
+    description:
+      "A platform connecting artists with event organizers. The system offers an intuitive dashboard where musicians can manage their profiles, receive 'Tips of the Day' to improve engagement, and handle gig proposals in real-time.",
     image: "/Connect.png",
-    tags: ["Next.js", "Tailwind"],
+    tags: ["React.js", "Rust"],
+  },
+  {
+    title: "Dealership Management System",
+    description:
+      "A Fullstack application for vehicle sales management. The solution encompasses a RESTful API developed with Spring Boot and an integrated responsive frontend interface.",
+    image: "/projetoCrud.png",
+    tags: ["Java", "Spring Boot"],
   },
 ];
 
@@ -35,8 +42,7 @@ const cardVariants = {
 export default function Projetos() {
   return (
     <>
-      {/* Título da seção */}
-      <div className=" text-center py-20">
+      <div className="text-center py-20 px-4">
         <p className="text-sm uppercase tracking-[0.2em] text-gray-400 mb-3">
           Projects
         </p>
@@ -48,8 +54,7 @@ export default function Projetos() {
         </p>
       </div>
 
-      {/* Lista vertical */}
-      <section className=" py-16">
+      <section className="py-16">
         <div className="max-w-5xl mx-auto px-6 md:px-8 space-y-8">
           {portfolioItems.map((item, index) => (
             <motion.div
@@ -59,15 +64,15 @@ export default function Projetos() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
-              className="relative w-full h-[260px] md:h-[320px] rounded-2xl 
-                         bg-neutral-800 overflow-hidden group cursor-pointer flex"
+              className="relative w-full h-auto md:h-[320px] rounded-2xl 
+                           bg-neutral-800 overflow-hidden group cursor-pointer flex flex-col md:flex-row"
             >
-              <div className="relative w-1/2 md:w-/5 h-full">
+              <div className="relative w-full h-64 md:h-full md:w-2/5">
                 <Image
                   src={item.image}
                   alt={item.title}
                   fill
-                  className="object-cover "
+                  className="object-cover"
                 />
               </div>
 
@@ -76,14 +81,16 @@ export default function Projetos() {
                   <h3 className="text-white text-2xl font-bold mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-gray-300 mb-4">{item.description}</p>
+                  <p className="text-gray-300 mb-4 text-sm md:text-base">
+                    {item.description}
+                  </p>
                 </div>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mt-4 md:mt-0">
                   {item.tags.map((tag, i) => (
                     <span
                       key={i}
                       className="text-xs px-3 py-1 bg-white/10 rounded-full 
-                                 text-white backdrop-blur-sm"
+                                     text-white backdrop-blur-sm"
                     >
                       {tag}
                     </span>
