@@ -54,9 +54,10 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
           >
-            <p className="max-w-xl md:max-w-2xl text-center text-3xl md:text-5xl font-bold italic leading-tight">
+            <div className="max-w-xl md:max-w-2xl text-center text-3xl md:text-5xl font-bold italic leading-tight flex flex-col items-center gap-2">
+              {/* Primeira Linha */}
               <ShinyText
-                text="Hi, I'm Lucas 👋 Full Stack Developer specialized in Backend."
+                text="Hi, I'm Lucas 👋"
                 speed={2}
                 delay={0}
                 color="#b5b5b5"
@@ -66,7 +67,20 @@ const Hero = () => {
                 yoyo={false}
                 pauseOnHover={false}
               />
-            </p>
+
+              {/* Segunda Linha */}
+              <ShinyText
+                text="Full Stack Developer"
+                speed={2}
+                delay={0} // Se quiser que o brilho comece um pouco depois, aumente aqui
+                color="#b5b5b5"
+                shineColor="#ffffff"
+                spread={120}
+                direction="left"
+                yoyo={false}
+                pauseOnHover={false}
+              />
+            </div>
 
             {/* CTA Button */}
             <motion.div

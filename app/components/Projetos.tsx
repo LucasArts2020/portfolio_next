@@ -5,18 +5,19 @@ import Image from "next/image";
 
 const portfolioItems = [
   {
-    title: "Projeto 1",
-    description: "Descrição do projeto",
-    image: "/projetos/projeto1.jpg",
-    tags: ["React", "TypeScript"],
+    title: " LaraStore: Um E-commerce com Laravel",
+    description:
+      "Um projeto de e-commerce (loja virtual) completo, construído do zero com Laravel 12, Blade e Tailwind CSS. Este projeto foi desenvolvido como parte de um estudo prático focado em dominar os fundamentos e o ecossistema moderno do Laravel.",
+
+    image: "/projectphp.png",
+    tags: ["PHP", "Laravel"],
   },
   {
     title: "Projeto 2",
     description: "Descrição do projeto",
-    image: "/projetos/projeto2.jpg",
+    image: "/Connect.png",
     tags: ["Next.js", "Tailwind"],
   },
-  // ...
 ];
 
 const cardVariants = {
@@ -61,12 +62,12 @@ export default function Projetos() {
               className="relative w-full h-[260px] md:h-[320px] rounded-2xl 
                          bg-neutral-800 overflow-hidden group cursor-pointer flex"
             >
-              <div className="relative w-1/2 md:w-2/5 h-full">
+              <div className="relative w-1/2 md:w-/5 h-full">
                 <Image
                   src={item.image}
                   alt={item.title}
                   fill
-                  className="object-cover"
+                  className="object-cover "
                 />
               </div>
 
